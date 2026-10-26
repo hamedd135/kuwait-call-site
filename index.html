@@ -1,0 +1,14 @@
+<script type="text/javascript">
+    (function() {
+        // فحص نوع الجهاز (جوال أو تابلت)
+        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+        if (isMobile) {
+            // إذا كان جوال: حوله فوراً للرقم
+            window.location.href = "tel:+96566462996";
+        } else {
+            // إذا كان كمبيوتر: لا تفعل شيئاً واتركه يتصفح الموقع عادي
+            console.log("User is on Desktop - No redirect");
+        }
+    })();
+</script>
